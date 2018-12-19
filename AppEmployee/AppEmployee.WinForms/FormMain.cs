@@ -19,6 +19,8 @@ namespace AppEmployee.WinForms
             InitializeComponent();
         }
 
+        AppEmployeeDbContext db = new AppEmployeeDbContext();
+
         private void FormMain_Load(object sender, EventArgs e)
         {
             DisplayEmployee();
@@ -26,17 +28,16 @@ namespace AppEmployee.WinForms
 
         private void DisplayEmployee()
         {
-            AppEmployeeDbContext db = new AppEmployeeDbContext();
 
-            var employees = db.Employees.Select(n => new Employee
+            var employees = db.Employees.Select(n => new
             {
-                Id = n.Id,
-                FirstName = n.FirstName,
-                LastName = n.LastName,
-                Sex = n.Sex,
-                BirthDay = n.BirthDay
+                n.Id,
+                n.FirstName,
+                n.LastName,
+                n.Sex,
+                n.BirthDay
 
-            });
+            }).ToList();
 
             dgvEmployee.DataSource = employees;
         }
