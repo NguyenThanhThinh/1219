@@ -10,9 +10,12 @@ namespace AppEmployee.Domain.Entities
 
         public string Name { get; set; }
 
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        public DateTime ModifiedDate { get; set; }
+        public int TotalEmployee { get; set; } = 0;
+
+        public DateTime? CreatedDate { get; set; } = DateTime.Now;
+
+        public DateTime? ModifiedDate { get; set; }
 
         public ICollection<Employee> Employeee { get; set; } = new HashSet<Employee>();
     }
