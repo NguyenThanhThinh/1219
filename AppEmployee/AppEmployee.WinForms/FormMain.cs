@@ -20,10 +20,14 @@ namespace AppEmployee.WinForms
         }
 
         AppEmployeeDbContext db = new AppEmployeeDbContext();
+        int position;
+        bool edit = true;
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             DisplayEmployee();
+
+            DisplayDepartment();
         }
 
         private void DisplayEmployee()
@@ -31,15 +35,30 @@ namespace AppEmployee.WinForms
 
             var employees = db.Employees.Select(n => new
             {
-                n.Id,
                 n.FirstName,
                 n.LastName,
                 n.Sex,
-                n.BirthDay
-
+                n.BirthDay,
+                n.Phone,
+                n.Address
             }).ToList();
 
             dgvEmployee.DataSource = employees;
+        }
+
+        private void DisplayDepartment()
+        {
+            var departments = db.Departments.Select(n => new
+            {
+                n.Id,
+                n.Name
+            });
+
+            cboDepartment.DataSource = departments.ToList();
+
+            cboDepartment.DisplayMember = "Name";
+
+            cboDepartment.ValueMember = "Id";
         }
     }
 }
