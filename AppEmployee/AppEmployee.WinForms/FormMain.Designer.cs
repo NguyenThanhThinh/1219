@@ -35,7 +35,7 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.txtBirthDay = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.chkSex = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,7 @@
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.Size = new System.Drawing.Size(783, 179);
             this.dgvEmployee.TabIndex = 0;
+            this.dgvEmployee.Click += new System.EventHandler(this.dgvEmployee_Click);
             // 
             // txtEmail
             // 
@@ -110,14 +113,14 @@
             this.txtLastName.Size = new System.Drawing.Size(157, 20);
             this.txtLastName.TabIndex = 6;
             // 
-            // dtpBirthDay
+            // txtBirthDay
             // 
-            this.dtpBirthDay.CustomFormat = "dd/MM/yyyy";
-            this.dtpBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDay.Location = new System.Drawing.Point(85, 80);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(131, 20);
-            this.dtpBirthDay.TabIndex = 7;
+            this.txtBirthDay.CustomFormat = "dd/MM/yyyy";
+            this.txtBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtBirthDay.Location = new System.Drawing.Point(85, 80);
+            this.txtBirthDay.Name = "txtBirthDay";
+            this.txtBirthDay.Size = new System.Drawing.Size(131, 20);
+            this.txtBirthDay.TabIndex = 7;
             // 
             // label3
             // 
@@ -189,6 +192,7 @@
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Tao moi";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -198,6 +202,7 @@
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Cap nhat";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -207,6 +212,7 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Xoa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
@@ -214,8 +220,9 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 18;
-            this.btnCancel.Text = "Tao moi";
+            this.btnCancel.Text = "Bo qua";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnExit
             // 
@@ -226,11 +233,33 @@
             this.btnExit.Text = "Thoat";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(547, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Gioi Tinh";
+            // 
+            // chkSex
+            // 
+            this.chkSex.AutoSize = true;
+            this.chkSex.Location = new System.Drawing.Point(635, 77);
+            this.chkSex.Name = "chkSex";
+            this.chkSex.Size = new System.Drawing.Size(48, 17);
+            this.chkSex.TabIndex = 21;
+            this.chkSex.Text = "Nam";
+            this.chkSex.UseVisualStyleBackColor = true;
+            // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkSex);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
@@ -243,7 +272,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpBirthDay);
+            this.Controls.Add(this.txtBirthDay);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFirstName);
@@ -269,7 +298,7 @@
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.DateTimePicker dtpBirthDay;
+        private System.Windows.Forms.DateTimePicker txtBirthDay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
@@ -282,6 +311,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox chkSex;
     }
 }
 
