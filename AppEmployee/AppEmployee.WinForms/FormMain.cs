@@ -179,5 +179,28 @@ namespace AppEmployee.WinForms
                 DisplayEmployee();
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearch.Text.Trim()))
+            {
+                DisplayEmployee();
+                return;
+            }
+
+            var data = db.Employees.Select(n => new
+            {
+                n.FirstName,
+                n.LastName,
+                n.Sex,
+                n.BirthDay,
+                n.Phone,
+                n.Address,
+                n.Email,
+                n.DepartmentId
+            }).Where(n => n.FirstName.Contains(txtSearch.Text.Trim()) || n.LastName.Contains(txtSearch.Text.Trim()));
+
+            dgvEmployee.DataSource = data.ToList();
+        }
     }
 }
