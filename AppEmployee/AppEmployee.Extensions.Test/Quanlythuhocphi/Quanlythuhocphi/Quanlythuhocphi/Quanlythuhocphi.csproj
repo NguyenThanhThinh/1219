@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75F27D8E-77CE-4506-AC80-EB3182420FE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quanlythuhocphi</RootNamespace>
+    <AssemblyName>Quanlythuhocphi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\LopBL.cs" />
+    <Compile Include="BusinessLogic\LyDoThuBL.cs" />
+    <Compile Include="BusinessLogic\MienGiamBL.cs" />
+    <Compile Include="BusinessLogic\NhanVienBL.cs" />
+    <Compile Include="BusinessLogic\PhieuThuBL.cs" />
+    <Compile Include="BusinessLogic\SinhVienBL.cs" />
+    <Compile Include="DataAccess\dsBaocao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetLOPID_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetLOP_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetLyDoThuById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetLyDoThu_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetMIENGIAM_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetNHANVIENById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetNHANVIEN_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetPhantrammiengiam_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetPhieuThuByNgay_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetPHIEUTHUBySOPHIEU_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetPHIEUTHUBySV_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetSINHVIENById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\GetSINHVIEN_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LOP.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LYDOTHU.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MIENGIAM.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\NHANVIEN.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\PHIEUTHU.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\QLTC.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\QLTC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\QLTC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ReportPhieuThu_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SearchSinhVien_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SINHVIEN.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmLydothu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLydothu.Designer.cs">
+      <DependentUpon>frmLydothu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmMiengiam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmMiengiam.Designer.cs">
+      <DependentUpon>frmMiengiam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmNhanvien.Designer.cs">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmSinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmSinhvien.Designer.cs">
+      <DependentUpon>frmSinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmThuhocphi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmThuhocphi.Designer.cs">
+      <DependentUpon>frmThuhocphi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmTimkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmTimkiem.Designer.cs">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmLydothu.resx">
+      <DependentUpon>frmLydothu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmMiengiam.resx">
+      <DependentUpon>frmMiengiam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmThuhocphi.resx">
+      <DependentUpon>frmThuhocphi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmTimkiem.resx">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="DataAccess\QLTC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLTC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccess\dsBaocao.xsc">
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\dsBaocao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBaocao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAccess\dsBaocao.xss">
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\QLTC.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLTC.edmx</DependentUpon>
+      <LastGenOutput>QLTC.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataAccess\QLTC.edmx.diagram">
+      <DependentUpon>QLTC.edmx</DependentUpon>
+    </None>
+    <None Include="DataAccess\QLTC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLTC.edmx</DependentUpon>
+      <LastGenOutput>QLTC.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_mixed_gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblem_library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

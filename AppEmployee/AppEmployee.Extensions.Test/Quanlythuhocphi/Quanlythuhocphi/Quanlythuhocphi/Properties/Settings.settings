@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Quanlythuhocphi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MaNV" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HoVaTen" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Diachi" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thanh Xuân - Hà Nội</Value>
+    </Setting>
+    <Setting Name="Dienthoai" Type="System.String" Scope="User">
+      <Value Profile="(Default)">09879098767</Value>
+    </Setting>
+    <Setting Name="Email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dainam@gmail.com</Value>
+    </Setting>
+    <Setting Name="Tieude" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Trường Đại Học ABC</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
