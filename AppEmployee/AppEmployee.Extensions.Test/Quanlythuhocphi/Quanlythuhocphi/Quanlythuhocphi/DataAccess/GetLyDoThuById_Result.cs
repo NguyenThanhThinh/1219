@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Quanlythuhocphi.DataAccess
+namespace AppEmployee.Extensions.Test.Quanlythuhocphi.Quanlythuhocphi.Quanlythuhocphi.DataAccess
 {
     using System;
     

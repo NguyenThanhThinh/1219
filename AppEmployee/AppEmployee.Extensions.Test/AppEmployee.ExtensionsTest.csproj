@@ -51,19 +51,340 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="EF_Cheat_Sheet.pdf" />
     <None Include="packages.config" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\LopBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\LyDoThuBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\MienGiamBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\NhanVienBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\PhieuThuBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\BusinessLogic\SinhVienBL.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\dsBaocao.Designer.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\dsBaocao1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetLOPID_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetLOP_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetLyDoThuById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetLyDoThu_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetMIENGIAM_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetNHANVIENById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetNHANVIEN_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetPhantrammiengiam_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetPhieuThuByNgay_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetPHIEUTHUBySOPHIEU_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetPHIEUTHUBySV_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetSINHVIENById_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\GetSINHVIEN_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\LOP.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\LYDOTHU.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\MIENGIAM.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\NHANVIEN.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\PHIEUTHU.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.Context.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.Designer.cs">
+      <DependentUpon>QLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\ReportPhieuThu_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\SearchSinhVien_Result.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\SINHVIEN.cs">
+      <DependentUpon>QLTC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLogin.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLop.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLydothu.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLydothu.Designer.cs">
+      <DependentUpon>frmLydothu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMDI.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMiengiam.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMiengiam.Designer.cs">
+      <DependentUpon>frmMiengiam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmNhanvien.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmNhanvien.Designer.cs">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmSetting.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmSinhvien.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmSinhvien.Designer.cs">
+      <DependentUpon>frmSinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmThuhocphi.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmThuhocphi.Designer.cs">
+      <DependentUpon>frmThuhocphi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmTimkiem.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmTimkiem.Designer.cs">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Program.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Properties\AssemblyInfo.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Properties\Resources.Designer.cs" />
+    <Compile Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Properties\Settings.Designer.cs" />
     <Compile Include="StringExtensions.Test.cs" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\Content\App.config.transform" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\Content\Web.config.transform" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\EntityFramework.6.1.2.nupkg" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\EntityFramework.psd1" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\EntityFramework.psm1" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\init.ps1" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\install.ps1" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\packages\repositories.config" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\App.config" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.exe.config" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.vshost.exe.config" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.vshost.exe.manifest" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\dsBaocao.xsc">
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </None>
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\dsBaocao.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBaocao1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\dsBaocao.xss">
+      <DependentUpon>dsBaocao.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLTC1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.edmx.diagram">
+      <DependentUpon>QLTC.edmx</DependentUpon>
+    </None>
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\edmxResourcesToEmbed\DataAccess\QLTC.csdl" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\edmxResourcesToEmbed\DataAccess\QLTC.msl" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\edmxResourcesToEmbed\DataAccess\QLTC.ssdl" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csproj.CopyComplete" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csproj.CoreCompileInputs.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csproj.GenerateResource.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csprojAssemblyReference.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csprojResolveAssemblyReference.cache" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\packages.config" />
+    <None Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppEmployee.WinForms\AppEmployee.WinForms.csproj">
       <Project>{d09f1ab7-cff1-4502-916a-16b833cd526d}</Project>
       <Name>AppEmployee.WinForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Quanlythuhocphi\QLThuhocphi.sql" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\class.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\document_graph.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\emblem_library %281%29.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\emblem_library.ico" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\emblem_library.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\employee.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\exit %281%29.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\exit.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\find.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\folder_close_yellow.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\folder_documents_yellow.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\fruite.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\gnome_dialog_question.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\gohome.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\graph.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\home.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\house_2.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\level.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\Man_Avatar.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\mug.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\people.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\pie_chart_red.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\pink_drop.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\printer.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\setting.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\student.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\system_config_boot.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\table-256.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\table-xl.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\txt_file.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\users_1.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\users_male.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\users_mixed_gender %281%29.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\users_mixed_gender.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\icons\woman.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\about_EntityFramework.help.txt" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\packages\EntityFramework.6.1.2\tools\migrate.exe" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi.sln" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\EntityFramework.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\EntityFramework.xml" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.exe" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.pdb" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Debug\Quanlythuhocphi.vshost.exe" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLTC.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\DataAccess\QLTC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLTC1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.csproj.FileListAbsolute.txt" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.exe" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.pdb" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\DataAccess.dsBaocao.Designer.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\DataAccess.QLTC.Context.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\DataAccess.QLTC.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\DataAccess.QLTC.Designer.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\Presentation.rptPhieuthu.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi.csproj" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi.csproj.user" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\class.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\document_graph.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\emblem_library.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\employee.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\exit %281%29.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\find.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\setting.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\txt_file.png" />
+    <Content Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Resources\users_mixed_gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmLogin.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmLop.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmLydothu.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmMDI.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmMiengiam.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmNhanvien.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmSetting.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmSinhvien.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmThuhocphi.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Presentation.frmTimkiem.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\obj\Debug\Quanlythuhocphi.Properties.Resources.resources" />
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmLydothu.resx">
+      <DependentUpon>frmLydothu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmMiengiam.resx">
+      <DependentUpon>frmMiengiam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmThuhocphi.resx">
+      <DependentUpon>frmThuhocphi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Presentation\frmTimkiem.resx">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Quanlythuhocphi\Quanlythuhocphi\Quanlythuhocphi\bin\Release\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
