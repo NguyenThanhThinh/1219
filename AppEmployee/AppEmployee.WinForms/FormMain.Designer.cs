@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,8 +62,8 @@
             // 
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.FirstName});
+            this.Id,
+            this.STT});
             this.dgvEmployee.Location = new System.Drawing.Point(12, 313);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.Size = new System.Drawing.Size(783, 179);
@@ -72,17 +72,6 @@
             this.dgvEmployee.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_RowEnter);
             this.dgvEmployee.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvEmployee_RowPostPaint);
             this.dgvEmployee.Click += new System.EventHandler(this.dgvEmployee_Click);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.Name = "FirstName";
             // 
             // txtEmail
             // 
@@ -295,13 +284,25 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(192, 263);
+            this.btnSave.Location = new System.Drawing.Point(182, 263);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Luu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Visible = false;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
             // 
             // frmEmployee
             // 
@@ -368,9 +369,9 @@
         private System.Windows.Forms.CheckBox chkSex;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
     }
 }
 

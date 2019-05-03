@@ -37,6 +37,7 @@ namespace AppEmployee.WinForms
 
             var employees = db.Employees.Select(n => new
             {
+                n.Id,
                 n.FirstName,
                 n.LastName,
                 n.Sex,
@@ -115,7 +116,8 @@ namespace AppEmployee.WinForms
                 if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    var emp = db.Employees.FirstOrDefault(x => x.Email == txtEmail.Text);
+                    var id = dgvEmployee.CurrentRow.Cells["Id"].Value;
+                    var emp = db.Employees.FirstOrDefault(x => x.Id== Convert.ToInt32(id));
                     if (emp != null)
                     {
 
@@ -191,6 +193,7 @@ namespace AppEmployee.WinForms
 
             var data = db.Employees.Select(n => new
             {
+                n.Id,
                 n.FirstName,
                 n.LastName,
                 n.Sex,
@@ -250,5 +253,7 @@ namespace AppEmployee.WinForms
                 edit = false;
             }
         }
+
+        
     }
 }
