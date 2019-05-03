@@ -49,7 +49,7 @@ namespace AppEmployee.WinForms
 
             dgvEmployee.DataSource = employees;
 
-            DisplayEmployeeDetail();
+           // DisplayEmployeeDetail();
         }
 
         private void DisplayDepartment()
@@ -97,14 +97,15 @@ namespace AppEmployee.WinForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtFirstName.Text = txtLastName.Text = txtPhone.Text = txtAddress.Text = txtEmail.Text = "";
-            txtFirstName.Focus();
-            edit = false;
+            //txtFirstName.Text = txtLastName.Text = txtPhone.Text = txtAddress.Text = txtEmail.Text = "";
+            //txtFirstName.Focus();
+            //edit = false;
+            ShowHideSaveCacel(true);
         }
 
         private void dgvEmployee_Click(object sender, EventArgs e)
         {
-            DisplayEmployeeDetail();
+           // DisplayEmployeeDetail();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -134,7 +135,7 @@ namespace AppEmployee.WinForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DisplayEmployeeDetail();
+           // DisplayEmployeeDetail();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -201,6 +202,53 @@ namespace AppEmployee.WinForms
             }).Where(n => n.FirstName.Contains(txtSearch.Text.Trim()) || n.LastName.Contains(txtSearch.Text.Trim()));
 
             dgvEmployee.DataSource = data.ToList();
+        }
+
+        private void dgvEmployee_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dgvEmployee["STT", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
+        }
+
+        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvEmployee_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvEmployee.Rows[e.RowIndex];
+
+            txtFirstName.Text = row.Cells["FirstName"].Value.ToString();
+
+            //txtLastName.Text = row.Cells[1].Value.ToString();
+
+            //chkSex.Checked = (bool)row.Cells[2].Value;
+
+            //txtBirthDay.Value = (DateTime)row.Cells["BirthDay"].Value == null ? (DateTime)row.Cells["BirthDay"].Value : DateTime.Now;
+
+            //txtPhone.Text = row.Cells[4].Value.ToString() != null ? row.Cells[4].Value.ToString() : string.Empty;
+
+            //txtAddress.Text = row.Cells[5].Value.ToString() != null ? row.Cells[5].Value.ToString() : string.Empty;
+
+            //txtEmail.Text = row.Cells[6].Value.ToString() != null ? row.Cells[6].Value.ToString() : string.Empty;
+
+            //cboDepartment.SelectedValue = row.Cells[7].Value;
+
+
+            edit = true;
+        }
+
+        private void ShowHideSaveCacel(bool isShow)
+        {
+            btnSave.Visible = btnCancel.Visible = isShow;
+            btnAdd.Visible = btnUpdate.Visible = btnDelete.Visible=btnExit.Visible = !isShow;
+
+            if(isShow && !edit)
+            {
+                txtFirstName.Text = txtLastName.Text = txtPhone.Text = txtAddress.Text = txtEmail.Text = "";
+                txtFirstName.Focus();
+                edit = false;
+            }
         }
     }
 }
